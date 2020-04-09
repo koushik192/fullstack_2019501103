@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <style>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+          <style>
             table {
               font-family: arial, sans-serif;
               border-collapse: collapse;
@@ -17,8 +24,12 @@
             tr:nth-child(even) {
               background-color: #dddddd;
             }
+            body {
+  background-color: rgb(0, 217, 255);
+}
             </style>
-<body bgcolor="#E6E6FA">
+<body>            
+   
     <div class="header">
         <img src="/Users/koushikmaruvada/Desktop/fullstack/fullstack_2019501103/htmljourney/logo.png" alt="logo" />
         
@@ -30,13 +41,17 @@
 
     MSIT has been designed to develop technically competent, highly productive, and self motivated professionals in tune with the demands of an ever changing market. The program aims to groom not only IT professionals, but also experts from other domains offering a unique and comprehensive program that exposes the learners to some of the finest universities both in India and abroad. At the end of their stint with MSIT, they will be armed as they are with new found confidence and vigor, step out into the world to further practice the skills they have learnt in this program..</p>
 </div>
-<h3>courses offered in first year</h3>
-<table>
+<div class="container">
+    <h2>Courses</h2>           
+    <table class="table table-striped">
+      <thead>
     <tr>
       <th>Course</th>
       <th>Credits</th>
       <th>passgrade</th>
     </tr>
+    </thead>
+    <tbody>
     <tr>
       <td>Java</td>
       <td>4</td>
@@ -59,11 +74,6 @@
       </tr>
       <tr>
         <td>DBMS</td>
-        <td>2</td>
-        <td>C</td>
-      </tr>
-      <tr>
-        <td>ADS2</td>
         <td>2</td>
         <td>C</td>
       </tr>
@@ -92,7 +102,21 @@
         <td>2</td>
         <td>C</td>
       </tr>
+      </tbody>
   </table>
+
+  <h3>Register here</h3>
+  <form name="myForm" action="/action_page.php" method="get">
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname"><br><br>
+    <label for="lname">Last name:</label>
+    <input type="text" id="lname" name="lname"><br><br>
+    <input type="radio" name="gender" value="male"> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="radio" name="gender" value="other"> Other
+
+  <input type="button" onclick="formSubmit()" value="Send form data!">
+  </form>
   </head>
 </body>
 </html>
