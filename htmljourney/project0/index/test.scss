@@ -1,0 +1,13 @@
+$h3color : blue;
+$pcolor :  red;
+div{
+    h3{
+      color : $h3color;  
+      font-style: italic;
+    }
+    p{
+        @extend h3;
+        color: $pcolor;
+
+    }
+}
